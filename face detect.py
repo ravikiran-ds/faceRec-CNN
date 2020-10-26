@@ -37,12 +37,12 @@ train_datagen=IDG(rescale=1./255,
 
 test_datagen=IDG(rescale=1./255)
 
-train_generator=train_datagen.flow_from_directory("C:\\Users\\HP\\Documents\\ML\\Projects\\my face detection\\data\\train\\",
+train_generator=train_datagen.flow_from_directory("train\\path",
                                             target_size=(64,64),
                                             batch_size=32,
                                             class_mode='binary')
 
-test_generator=test_datagen.flow_from_directory("C:\\Users\\HP\\Documents\\ML\\Projects\\my face detection\\data\\test\\",
+test_generator=test_datagen.flow_from_directory("test\\path",
                                                 target_size=(64,64),
                                                 batch_size=32,
                                                 class_mode='binary')
