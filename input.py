@@ -9,10 +9,10 @@ from  capture import capture_photos
 
 def inpu():
     #capture photo
-    capture_photos("C:\\Users\\HP\\Documents\\ML\\Projects\\my face detection\\data\\test user input\\test_user\\",photos=5)
+    capture_photos("path",photos=5)
     #test with user input
     test_datagen=IDG(rescale=1./255)
-    test_batches=test_datagen.flow_from_directory("C:\\Users\\HP\\Documents\\ML\\Projects\\my face detection\\data\\test user input\\",
+    test_batches=test_datagen.flow_from_directory("path\\input",
                                                     target_size=(64,64),
                                                     batch_size=32,
                                                     class_mode='binary')
